@@ -7,8 +7,10 @@ router.post('/',function (req,res,next) {
         "type":"text",
         "content":req.body.content
     };
-    res.set('200',{'Content-Type':'application/json;charset=utf8'});
-    res.send(_obj);
+    if(req.body.content == "안녕") {
+        res.set('200', {'Content-Type': 'application/json;charset=utf8'});
+        res.send(_obj);
+    }
 });
 
 module.exports = router;
