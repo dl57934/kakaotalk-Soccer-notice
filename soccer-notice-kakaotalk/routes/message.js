@@ -7,9 +7,10 @@ router.post('/',function (req,res,next) {
         "type":"text",
         "content":req.body.content
     };
+    var bye_message = {"message":{"text":"hihi"}};
     if(req.body.content == "안녕") {
         res.set('200', {'Content-Type': 'application/json;charset=utf8'});
-        res.send(_obj);
+        res.send(bye_message);
     }
 });
 
