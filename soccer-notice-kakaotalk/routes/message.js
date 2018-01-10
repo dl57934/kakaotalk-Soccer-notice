@@ -19,10 +19,10 @@ router.post('/',function (req,res,next) {
         }).then(function (status) {
             console.log(status);
             return _page.evaluate(function () {
-		return document.getElementById('wfootballTeamRecordBody').textContent;
+		return document.getElementsByTagName('tbody').textContent;
 		})
         }).then(function (content) {
-	    content = content.trim();
+
             var bye_message = {"message":{"text":content.toString()}};
             console.log(content);
             _page.close();
