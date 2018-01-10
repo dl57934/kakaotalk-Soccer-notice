@@ -22,6 +22,7 @@ router.post('/',function (req,res,next) {
 		return document.getElementById('wfootballTeamRecordBody').textContent;
 		})
         }).then(function (content) {
+	    content = content.trim();
             var bye_message = {"message":{"text":content.toString()}};
             console.log(content);
             _page.close();
