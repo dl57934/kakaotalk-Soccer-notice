@@ -17,6 +17,7 @@ router.post('/',function (req,res,next) {
         });
         res.set('200', {'Content-Type': 'application/json;charset=utf8'});
         res.send(title);
+        phantom.exit();
     }
 });
 
