@@ -8,7 +8,7 @@ router.post('/',function (req,res,next) {
         "type":"text",
         "content":req.body.content
     };
-    var bye_message = {"message":{"text":"hihi"}};
+
     if(req.body.content == "안녕") {
         phantom.create().then(function (ph) {
             _ph = ph;
@@ -20,9 +20,10 @@ router.post('/',function (req,res,next) {
             console.log(status);
             return _page.property('content');
         }).then(function (content) {
+            var bye_message = {"message":{"text":content}};
             console.log(content);
             res.set('200', {'Content-Type': 'application/json;charset=utf8'});
-            res.send(content);
+            res.send(bye_message);
             _page.close();
             _ph.exit();
         }).catch(function (e) {
