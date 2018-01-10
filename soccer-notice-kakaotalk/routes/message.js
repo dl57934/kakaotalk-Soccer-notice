@@ -15,17 +15,20 @@ router.post('/',function (req,res,next) {
             return _ph.createPage();
         }).then(function (page) {
             _page = page;
-            return _page.open('http://sports.news.naver.com/wfootball/index.nhn');
+            return _page.open('http://sports.news.naver.com/wfootball/record/index.nhn');
         }).then(function (status) {
             console.log(status);
-            return _page.property('content');
+            return _page.evaluate(function () {
+		return document.getElementById('wfootballTeamRecordBody').textContent;
+		})
         }).then(function (content) {
-            var bye_message = {"message":{"text":content}};
+            var bye_message = {"message":{"text":content.toString()}};
             console.log(content);
-            res.set('200', {'Content-Type': 'application/json;charset=utf8'});
-            res.send(bye_message);
             _page.close();
             _ph.exit();
+            res.set('200', {'Content-Type': 'application/json;charset=utf8'});
+            res.send(bye_message);
+
         }).catch(function (e) {
             console.log(e);
         })
