@@ -59,7 +59,7 @@ router.post('/',function (req,res,next) {
                 var tdLength = document.getElementsByTagName('td');
                 var returnText="";
                 for(var i = 0; i <tdLength.length; i++){
-                    if(i%10 == 0 || i%10 == 1)
+                    if(i%4 == 0 || i%4 == 1)
                     returnText += tdLength[i].textContent;
                 }
                 return returnText;
