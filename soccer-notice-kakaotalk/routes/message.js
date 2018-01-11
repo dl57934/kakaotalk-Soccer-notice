@@ -65,6 +65,7 @@ router.post('/',function (req,res,next) {
                 return returnText;
             })
         }).then(function (content) {
+            content = content.replace(/^\s+|\s+$/gm,'');
             var bye_message = {"message":{"text":content.toString()}};
             console.log(content);
             _page.close();
