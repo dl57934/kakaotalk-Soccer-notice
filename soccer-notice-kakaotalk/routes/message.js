@@ -46,16 +46,22 @@ router.post('/',function (req,res,next) {
         })
     }
 
-    else if(req.body.content == "E 일정"||req.body.content == "E일정"){
+    else if(req.body.content == "E 일정"||req.body.content == "E일정" || req.body.content == "L 일정"||req.body.content == "L일정" ||req.body.content == "B 일정"||req.body.content == "B일정"){
         phantom.create().then(function (ph) {
             _ph = ph;
             return _ph.createPage();
         }).then(function (page) {
+            var selectPage;
+            if(req.body.content == "E 순위"||req.body.content == "E순위")
+                selectPage = 'http://sports.news.naver.com/wfootball/schedule/index.nhn';
+            else if( req.body.content == "L 순위"||req.body.content == "L순위")
+                selectPage = 'http://sports.news.naver.com/wfootball/schedule/index.nhn?category=primera';
+            else if(req.body.content == "B 순위"||req.body.content == "B순위")
+                selectPage = 'http://sports.news.naver.com/wfootball/schedule/index.nhn?category=bundesliga';
             _page = page;
-            return _page.open('http://sports.news.naver.com/wfootball/schedule/index.nhn');
+            return _page.open(selectPage);
         }).then(function (status) {
             return _page.evaluate(function () {
-                var thLength = document.getElementsByTagName('th');
                 var tdLength = document.getElementsByTagName('tbody')[0].textContent;
                 var returnText="";
                 /*for(var i = 0; i <tdLength.length; i++){
