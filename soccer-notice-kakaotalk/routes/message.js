@@ -72,6 +72,9 @@ router.post('/',function (req,res,next) {
             })
         }).then(function (content) {
             content = content.replace(/^\s+|\s+$/gm,'');
+            content = content.replace('경기기록','');
+            content = content.replace('경기영상','');
+            content = content.replace('전력비교','');
             var bye_message = {"message":{"text":content.toString()}};
             console.log(content);
             _page.close();
