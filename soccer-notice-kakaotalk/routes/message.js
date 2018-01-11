@@ -56,13 +56,13 @@ router.post('/',function (req,res,next) {
         }).then(function (status) {
             return _page.evaluate(function () {
                 var thLength = document.getElementsByTagName('th');
-                var tdLength = document.getElementsByTagName('td');
+                var tdLength = document.getElementsByTagName('tbody')[0].textContent;
                 var returnText="";
-                for(var i = 0; i <tdLength.length; i++){
+                /*for(var i = 0; i <tdLength.length; i++){
                     if(i%4 == 0 || i%4 == 1)
                     returnText += tdLength[i].textContent;
-                }
-                return returnText;
+                }*/
+                return tdLength;
             })
         }).then(function (content) {
             content = content.replace(/^\s+|\s+$/gm,'');
