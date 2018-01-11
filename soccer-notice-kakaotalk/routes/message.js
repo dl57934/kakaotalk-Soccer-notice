@@ -61,8 +61,8 @@ router.post('/',function (req,res,next) {
                 for(var i = 0; i <tdLength.length; i++){
                     if(i%10 == 0 || i%10 == 1)
                     returnText += tdLength[i].textContent;
-                    return returnText;
                 }
+                return returnText;
             })
         }).then(function (content) {
             var bye_message = {"message":{"text":content.toString()}};
