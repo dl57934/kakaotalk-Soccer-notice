@@ -52,11 +52,11 @@ router.post('/',function (req,res,next) {
             return _ph.createPage();
         }).then(function (page) {
             var selectPage;
-            if(req.body.content == "E 순위"||req.body.content == "E순위")
+            if(req.body.content == "E 일정"||req.body.content == "E일정")
                 selectPage = 'http://sports.news.naver.com/wfootball/schedule/index.nhn';
-            else if( req.body.content == "L 순위"||req.body.content == "L순위")
+            else if( req.body.content == "L 일정"||req.body.content == "L일정")
                 selectPage = 'http://sports.news.naver.com/wfootball/schedule/index.nhn?category=primera';
-            else if(req.body.content == "B 순위"||req.body.content == "B순위")
+            else if(req.body.content == "B 일정"||req.body.content == "B일정")
                 selectPage = 'http://sports.news.naver.com/wfootball/schedule/index.nhn?category=bundesliga';
             _page = page;
             return _page.open(selectPage);
