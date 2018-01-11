@@ -9,7 +9,7 @@ router.post('/',function (req,res,next) {
         "content":req.body.content
     };
 
-    if(req.body.content == "안녕") {
+    if(req.body.content == "E 순위"||req.body.content == "E순위" ) {
         phantom.create().then(function (ph) {
             _ph = ph;
             return _ph.createPage();
@@ -18,10 +18,20 @@ router.post('/',function (req,res,next) {
             return _page.open('http://sports.news.naver.com/wfootball/record/index.nhn');
         }).then(function (status) {
             console.log(status);
-            return _page.evaluate(function () {
-		return document.getElementById('wfootballTeamRecordBody').textContent;
-		})
-        }).then(function (content) {  
+	    return _page.evaluate(function(){
+		var tdLength = document.getElementsByTagName('td');
+		var returnText="";
+		var ranking =1;
+	        for(var i = 0; i < tdLength.length;i++){
+			if(i % 10 == 1){
+			  returnText +=ranking+'위' + tdLength[i].textContent+'\n';
+			  ranking++;	
+			}
+		} 
+		return returnText;
+			})
+        }).then(function (content) {   
+	    content = content.replace(/^\s+|\s+$/gm,'');
 	    var bye_message = {"message":{"text":content.toString()}};
             console.log(content);
             _page.close();
@@ -33,6 +43,7 @@ router.post('/',function (req,res,next) {
             console.log(e);
         })
     }
+
 });
 
 module.exports = router;
