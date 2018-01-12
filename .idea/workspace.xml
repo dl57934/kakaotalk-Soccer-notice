@@ -1,18 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5d863b9d-7d4c-422c-981a-05762ebffdd1" name="Default" comment="일정에 경기기록 경기영상 전력비교 없애기 시도 2">
+    <list default="true" id="5d863b9d-7d4c-422c-981a-05762ebffdd1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/soccer-notice-kakaotalk/node_modules/phantom/LICENSE.md" afterPath="$PROJECT_DIR$/soccer-notice-kakaotalk/node_modules/phantom/LICENSE.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/soccer-notice-kakaotalk/node_modules/phantom/README.md" afterPath="$PROJECT_DIR$/soccer-notice-kakaotalk/node_modules/phantom/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/soccer-notice-kakaotalk/node_modules/phantom/lib/command.js" afterPath="$PROJECT_DIR$/soccer-notice-kakaotalk/node_modules/phantom/lib/command.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/soccer-notice-kakaotalk/node_modules/phantom/lib/index.js" afterPath="$PROJECT_DIR$/soccer-notice-kakaotalk/node_modules/phantom/lib/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/soccer-notice-kakaotalk/node_modules/phantom/lib/out_object.js" afterPath="$PROJECT_DIR$/soccer-notice-kakaotalk/node_modules/phantom/lib/out_object.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/soccer-notice-kakaotalk/node_modules/phantom/lib/page.js" afterPath="$PROJECT_DIR$/soccer-notice-kakaotalk/node_modules/phantom/lib/page.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/soccer-notice-kakaotalk/node_modules/phantom/lib/phantom.js" afterPath="$PROJECT_DIR$/soccer-notice-kakaotalk/node_modules/phantom/lib/phantom.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/soccer-notice-kakaotalk/node_modules/phantom/lib/shim/index.js" afterPath="$PROJECT_DIR$/soccer-notice-kakaotalk/node_modules/phantom/lib/shim/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/soccer-notice-kakaotalk/node_modules/phantom/package.json" afterPath="$PROJECT_DIR$/soccer-notice-kakaotalk/node_modules/phantom/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/soccer-notice-kakaotalk/package.json" afterPath="$PROJECT_DIR$/soccer-notice-kakaotalk/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/soccer-notice-kakaotalk/routes/message.js" afterPath="$PROJECT_DIR$/soccer-notice-kakaotalk/routes/message.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -90,8 +80,8 @@
       <file leaf-file-name="message.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/soccer-notice-kakaotalk/routes/message.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="667">
-              <caret line="29" column="31" lean-forward="true" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
+            <state relative-caret-position="2024">
+              <caret line="88" column="0" lean-forward="true" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -256,7 +246,7 @@
       <workItem from="1515005046786" duration="1053000" />
       <workItem from="1515435660263" duration="11067000" />
       <workItem from="1515578701250" duration="6011000" />
-      <workItem from="1515639422013" duration="12325000" />
+      <workItem from="1515639422013" duration="12870000" />
     </task>
     <task id="LOCAL-00001" summary="keyboard 파일 추가">
       <created>1515438750917</created>
@@ -412,11 +402,18 @@
       <option name="project" value="LOCAL" />
       <updated>1515689229303</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="블로그용 1">
+      <created>1515735327805</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1515735327805</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30456000" />
+    <option name="totallyTimeSpent" value="31001000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -464,7 +461,8 @@
     <MESSAGE value="3대리그 일정 완료" />
     <MESSAGE value="일정에 경기기록 경기영상 전력비교 없애기 시도 1" />
     <MESSAGE value="일정에 경기기록 경기영상 전력비교 없애기 시도 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="일정에 경기기록 경기영상 전력비교 없애기 시도 2" />
+    <MESSAGE value="블로그용 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="블로그용 1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -666,8 +664,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/soccer-notice-kakaotalk/routes/message.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="667">
-          <caret line="29" column="31" lean-forward="true" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
+        <state relative-caret-position="2024">
+          <caret line="88" column="0" lean-forward="true" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
           <folding />
         </state>
       </provider>
